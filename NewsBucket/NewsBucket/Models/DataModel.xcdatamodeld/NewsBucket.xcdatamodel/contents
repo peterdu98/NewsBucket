@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19E266" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="NewsCategory" representedClassName=".NewsCategory" syncable="YES" codeGenerationType="class">
+        <attribute name="count" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String"/>
+        <relationship name="news" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SavedNews" inverseName="parentCategory" inverseEntity="SavedNews"/>
+        <relationship name="parentPlatform" maxCount="1" deletionRule="Nullify" destinationEntity="NewsPlatforms" inverseName="categories" inverseEntity="NewsPlatforms"/>
+    </entity>
+    <entity name="NewsPlatforms" representedClassName=".NewsPlatforms" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String"/>
+        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NewsCategory" inverseName="parentPlatform" inverseEntity="NewsCategory"/>
+    </entity>
+    <entity name="SavedNews" representedClassName=".SavedNews" syncable="YES" codeGenerationType="class">
+        <attribute name="author" attributeType="String"/>
+        <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="publishedAt" attributeType="String"/>
+        <attribute name="source" optional="YES" attributeType="String"/>
+        <attribute name="title" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+        <relationship name="parentCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NewsCategory" inverseName="news" inverseEntity="NewsCategory"/>
+    </entity>
+    <elements>
+        <element name="NewsCategory" positionX="-556.0625" positionY="633.4453125" width="128" height="103"/>
+        <element name="NewsPlatforms" positionX="-745.36328125" positionY="526.0390625" width="128" height="73"/>
+        <element name="SavedNews" positionX="-261.21484375" positionY="611.328125" width="128" height="148"/>
+    </elements>
+</model>

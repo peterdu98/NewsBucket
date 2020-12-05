@@ -1,0 +1,22 @@
+PODS:
+  - Charts (3.5.0):
+    - Charts/Core (= 3.5.0)
+  - Charts/Core (3.5.0)
+  - Connectivity (4.0.0)
+
+DEPENDENCIES:
+  - Charts
+  - Connectivity
+
+SPEC REPOS:
+  trunk:
+    - Charts
+    - Connectivity
+
+SPEC CHECKSUMS:
+  Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
+  Connectivity: c40b8de0a331b8081f790c8a3e6ada9f1d418065
+
+PODFILE CHECKSUM: 3aa8c7a9f02ae118532a8abe255f9104de3c57d3
+
+COCOAPODS: 1.9.1
